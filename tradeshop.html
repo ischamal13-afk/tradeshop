@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TradeShop — Marketplace</title>
+<style>
+:root{
+  --bg:#070914; --panel:#101426; --panel2:#151a30; --text:#f5f7ff;
+  --muted:#9299b8; --primary:#7c5cff; --accent:#19d3ff; --border:#252b45;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:
+radial-gradient(circle at 15% 0%,#21134d 0,transparent 35%),
+radial-gradient(circle at 90% 20%,#073f55 0,transparent 30%),var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;
+padding:0 6%;border-bottom:1px solid #ffffff10;background:#070914cc;backdrop-filter:blur(12px);position:sticky;top:0;z-index:5}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;color:#c5c9dd;font-size:14px}.btn{border:0;border-radius:11px;padding:11px 17px;font-weight:800;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--primary),#a05cff);color:#fff}.btn.ghost{background:#ffffff08;color:#fff;border:1px solid var(--border)}
+.hero{max-width:1120px;margin:0 auto;padding:82px 6% 48px;text-align:center}.badge{display:inline-block;padding:7px 12px;
+border:1px solid #ffffff18;border-radius:99px;color:#b9b3ff;background:#ffffff08;font-size:12px;font-weight:800}
+h1{font-size:clamp(44px,7vw,78px);line-height:.98;margin:20px 0 18px;letter-spacing:-4px}
+h1 span{background:linear-gradient(90deg,#fff,#8d7cff,#1bdcff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px;line-height:1.6}.actions{margin-top:28px;display:flex;gap:12px;justify-content:center}
+.notice{max-width:1050px;margin:20px auto 0;padding:13px 18px;border:1px solid #ffcc6633;background:#ffcc6608;color:#d9dced;border-radius:12px;font-size:12px;text-align:center}
+.section{max-width:1120px;margin:45px auto;padding:0 6%}.top{display:flex;justify-content:space-between;align-items:end;gap:20px}.top h2{margin:0;font-size:28px}.top p{color:var(--muted);margin:7px 0 0}
+.filters{display:flex;gap:9px;margin:20px 0;flex-wrap:wrap}.filter{padding:9px 13px;border-radius:9px;background:#ffffff08;border:1px solid var(--border);color:#bfc4d8;cursor:pointer}.filter.active{background:#7c5cff22;border-color:#7c5cff;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,#12172a,#0d1120);border:1px solid var(--border);border-radius:17px;overflow:hidden}
+.cover{height:155px;background:linear-gradient(135deg,#2d1a61,#172d56);display:flex;align-items:end;padding:16px;position:relative}
+.cover.c2{background:linear-gradient(135deg,#0a596c,#18305f)}.cover.c3{background:linear-gradient(135deg,#63301c,#25184e)}
+.tag{position:absolute;top:12px;left:12px;background:#0a0d18cc;padding:6px 9px;border-radius:8px;font-size:11px;font-weight:800}.skin{font-size:21px;font-weight:900;text-shadow:0 2px 14px #000}
+.body{padding:16px}.row{display:flex;justify-content:space-between;gap:12px}.muted{color:var(--muted);font-size:12px}.price{font-size:21px;font-weight:900}.meta{margin:13px 0;display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:11px;padding:6px 8px;background:#ffffff07;border-radius:7px;color:#bfc4d8}
+.card .btn{width:100%;margin-top:3px}.empty{display:none;text-align:center;padding:40px;color:var(--muted);grid-column:1/-1}
+footer{margin-top:80px;padding:35px 6%;border-top:1px solid #ffffff10;color:#747b99;font-size:12px;text-align:center}
+@media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:1fr}.hero{padding-top:55px}h1{letter-spacing:-2px}.top{display:block}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">Trade<span>Shop</span></div>
+  <div class="navlinks"><a href="#market">Marketplace</a><a href="#how">Cómo funciona</a><a href="#safety">Seguridad</a></div>
+  <button class="btn primary" onclick="alert('Demo: inicia sesión aquí')">Iniciar sesión</button>
+</nav>
+
+<header class="hero">
+  <div class="badge">TRADE SHOP • MARKETPLACE DEMO</div>
+  <h1>Encuentra tu próxima <span>cuenta</span></h1>
+  <p>Un diseño moderno para un marketplace de cuentas de videojuegos. Explora anuncios, filtra resultados y descubre perfiles.</p>
+  <div class="actions"><a class="btn primary" href="#market">Explorar marketplace</a><a class="btn ghost" href="#how">Cómo funciona</a></div>
+  <div class="notice">⚠️ Esta demo no procesa pagos ni transferencias de cuentas. Las transferencias de cuentas pueden estar prohibidas por los términos del juego y conllevan riesgo de estafa o pérdida de acceso.</div>
+</header>
+
+<section class="section" id="market">
+  <div class="top"><div><h2>Marketplace</h2><p>Ejemplos de anuncios para mostrar el diseño.</p></div></div>
+  <div class="filters">
+    <button class="filter active" data-filter="all">Todos</button>
+    <button class="filter" data-filter="rare">Rarezas</button>
+    <button class="filter" data-filter="skins">Skins</button>
+    <button class="filter" data-filter="old">Antiguas</button>
+  </div>
+  <div class="grid" id="grid">
+    <article class="card" data-cat="rare"><div class="cover"><span class="tag">RARO</span><div class="skin">Cuenta Legendaria</div></div><div class="body"><div class="row"><b>Perfil #1042</b><b class="price">—</b></div><div class="meta"><span class="chip">OG</span><span class="chip">Muchas skins</span><span class="chip">Nivel alto</span></div><button class="btn ghost" onclick="showDemo()">Ver anuncio</button></div></article>
+    <article class="card" data-cat="skins"><div class="cover c2"><span class="tag">DESTACADA</span><div class="skin">Colección Élite</div></div><div class="body"><div class="row"><b>Perfil #2871</b><b class="price">—</b></div><div class="meta"><span class="chip">Skins</span><span class="chip">Emotes</span><span class="chip">Inventario</span></div><button class="btn ghost" onclick="showDemo()">Ver anuncio</button></div></article>
+    <article class="card" data-cat="old"><div class="cover c3"><span class="tag">VETERANA</span><div class="skin">Cuenta Clásica</div></div><div class="body"><div class="row"><b>Perfil #3310</b><b class="price">—</b></div><div class="meta"><span class="chip">Antigua</span><span class="chip">Colección</span><span class="chip">Cosméticos</span></div><button class="btn ghost" onclick="showDemo()">Ver anuncio</button></div></article>
+    <div class="empty" id="empty">No hay anuncios en esta categoría.</div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="top"><div><h2>Cómo funciona</h2><p>Flujo visual para tu futura plataforma.</p></div></div>
+  <div class="grid" style="margin-top:20px">
+    <div class="card"><div class="body"><b>01 · Publica</b><p class="muted">Crea un anuncio con información del perfil y sus características.</p></div></div>
+    <div class="card"><div class="body"><b>02 · Descubre</b><p class="muted">Los usuarios pueden buscar y filtrar los anuncios.</p></div></div>
+    <div class="card" id="safety"><div class="body"><b>03 · Seguridad</b><p class="muted">Añade verificación, moderación y protección antifraude antes de cualquier transacción.</p></div></div>
+  </div>
+</section>
+
+<footer>© 2026 TradeShop · Prototipo de interfaz. No afiliado a Epic Games.</footer>
+
+<script>
+const buttons=document.querySelectorAll('.filter');
+const cards=document.querySelectorAll('.card[data-cat]');
+const empty=document.getElementById('empty');
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+  buttons.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  const f=btn.dataset.filter; let count=0;
+  cards.forEach(c=>{const show=f==='all'||c.dataset.cat===f;c.style.display=show?'block':'none';if(show)count++;});
+  empty.style.display=count?'none':'block';
+}));
+function showDemo(){alert('Demo de TradeShop: aquí iría la página de detalle del anuncio.');}
+</script>
+</body>
+</html>
